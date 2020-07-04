@@ -10,32 +10,73 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
 <body>
-    
-
-    <div class="screen">0</div>
-
+        <input type="text" class="screen" disabled placeholder="0">
     <div class="main">
-        <div class="box ce" id="ce">CE</div>
-        <div class="box c" id="c">C</div>
-        <div class="box back" id="back"><img src="icons/icons8-clear-symbol-30.png" alt="backspace"></div>
-        <div class="box divide" id="divide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M224 352c-35.35 0-64 28.65-64 64s28.65 64 64 64 64-28.65 64-64-28.65-64-64-64zm0-192c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm192 48H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg></i></div>
-        <div class="box seven" id="seven">7</div>
-        <div class="box eight" id="eight">8</div>
-        <div class="box nine" id="nine">9</div>
-        <div class="box mult" id="mult"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" width="20px" height="25px"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg></div>
-        <div class="box four" id="4">4</div>
-        <div class="box five" id="5">5</div>
-        <div class="box six" id="6">6</div>
-        <div class="box subt" id="subt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg></div>
-        <div class="box one">1</div>
-        <div class="box two">2</div>
-        <div class="box three">3</div>
-        <div class="box plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg></div>
-        <div class="box neg">+/-</div>
-        <div class="box zero">0</div>
-        <div class="box dott">.</div>
-        <div class="box equals"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>  </div>
+        <div onclick="myFunction(event)">
+            <button class="box seven" type="submit" value= "7">7</button>
+            <button class="box eight" value= "8">8</button>
+            <button class="box nine" value= "9">9</button>
+            <button class="box four" value= "4">4</button>
+            <button class="box five" value= "5">5</button>
+            <button class="box six" value= "6">6</button>
+            <button class="box one" value= "1">1</button>
+            <button class="box two" value= "2">2</button>
+            <button class="box three" value= "3">3</button>
+            <button class="box zero" value= "0">0</button>
+        </div>
+            <div onclick="myFunction(event)">
+                <button class= "box divide" id="divide" value="/">/</button>
+                <button class="box mult" id="mult" type="submit" value="*">x</button>
+                <button class="box subt" id="subt" value="-">-</button>               
+                <button class="box plus" value="+">+</button>
+                <button class="box dott"  value=".">.</button>
+            </div>
+            
+        
+        <div>
+            <button class="box-ce" id="ce">CE</button>
+            <button class="box back" onclick="onPressBackspace()" id="back"><img src="icons/icons8-clear-symbol-30.png" alt="backspace"></button>
+            <button class="box-equals" type="submit" value="="> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>  </button>
+        </div>
     </div>
-    
-</body>
+    <script>
+        var nut= ""
+        function myFunction(event){   
+        var clicks = event.target.value;
+        if(clicks){
+            var inputs = document.querySelector(".screen").value += clicks;      
+        }
+        document.querySelector(".box-ce").addEventListener("click", clrBtn)  
+        document.querySelector(".box-equals").addEventListener("click", equBtn) 
+        }
+        // Mathematics takes place here
+        //calculate
+        function think(inputs){
+            if(inputs){
+                var Ans = eval(inputs);
+            }
+            return Ans ;
+        }
+        function equBtn(){
+            //take input value 
+            var iVal = document.querySelector(".screen").value;
+            //clear whilst calculating 
+            document.querySelector(".screen").value= " ";
+            //give value with eval func
+            var show = think(iVal)
+            // show  result 
+            document.querySelector(".screen").value = show; 
+        }
+        //clear screen
+        function clrBtn(event) {
+            document.querySelector(".screen").value = " ";
+            // event.preventDefault();
+            // document.querySelector(".disp").value = " ";
+        }
+        function onPressBackspace() {
+            var scr= document.querySelector(".screen");
+            scr.value= scr.value.substring(0, scr.value.length -1)
+        }
+        </script>
+    </body>
 </html>

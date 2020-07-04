@@ -1,19 +1,12 @@
 * {
     box-sizing: border-box;
 }
-
-
-
-
 body {
     font-family: 'Handlee', cursive, serif;
     max-width: 350px;
     margin: auto;
     margin-top: 80px;
 }
-
-
-
 .main {
     display: grid;
     width: 350px;
@@ -26,22 +19,17 @@ body {
     border-bottom-right-radius: 4px;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     background-color: rgb(24, 24, 24);
-    
 }
-
 .box {
 
     font-size: 25px;
     color: white;
     padding-top: 30px;
 }
-
 .box:hover {
     background-color: gray;
     cursor: pointer;
 }
-
-
 .screen {
     background-color: rgb(54, 54, 54);
     display: block;
@@ -55,36 +43,24 @@ body {
     color: white;
     z-index: 2;
 }
-
 svg {
     fill: white;
 }
 img {
     color: white;
 }
-
-
-
 .ce, .c, .back, .divide, .mult, .subt, .plus{
     background-color: rgb(32, 32, 32);
-    
 }
-
 .equals {
     background-color: rgb(83, 135, 194);
 }
-
 .equals:hover {
     background-color: rgb(110, 110, 252);
 }
-
-
- .dott, .zero, .neg, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
-     background-color: black;
- }
-
- 
-
+.dott, .zero, .neg, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+    background-color: black;
+}
  @media (min-width: 600px) {
 
     body {
@@ -95,7 +71,6 @@ img {
          height: 500px;
          width: 400px;
      }
-
      .screen {
          width: 400px;
      }
