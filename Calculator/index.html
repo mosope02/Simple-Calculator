@@ -35,6 +35,7 @@
         
         <div>
             <button class="box-ce" id="ce">CE</button>
+            <button class="neg">+/-</button>
             <button class="box back" onclick="onPressBackspace()" id="back"><img src="icons/icons8-clear-symbol-30.png" alt="backspace"></button>
             <button class="box-equals" type="submit" value="="> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>  </button>
         </div>
@@ -47,7 +48,8 @@
             var inputs = document.querySelector(".screen").value += clicks;      
         }
         document.querySelector(".box-ce").addEventListener("click", clrBtn)  
-        document.querySelector(".box-equals").addEventListener("click", equBtn) 
+        document.querySelector(".box-equals").addEventListener("click", equBtn)
+        document.querySelector(".neg").addEventListener("click", negBtn) 
         }
         // Mathematics takes place here
         //calculate
@@ -76,6 +78,10 @@
         function onPressBackspace() {
             var scr= document.querySelector(".screen");
             scr.value= scr.value.substring(0, scr.value.length -1)
+        }
+        function negBtn() {
+            var scr= document.querySelector(".screen");
+            scr.value = scr.value * -1
         }
         </script>
     </body>
