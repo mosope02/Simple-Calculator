@@ -11,8 +11,7 @@
 </head>
 <body>
         <input type="text" class="screen" disabled placeholder="0">
-    <div class="main">
-        <div onclick="myFunction(event)">
+    <div class="main" onclick="myFunction(event)">
             <button class="box seven" type="submit" value= "7">7</button>
             <button class="box eight" value= "8">8</button>
             <button class="box nine" value= "9">9</button>
@@ -23,22 +22,15 @@
             <button class="box two" value= "2">2</button>
             <button class="box three" value= "3">3</button>
             <button class="box zero" value= "0">0</button>
-        </div>
-            <div onclick="myFunction(event)">
-                <button class= "box divide" id="divide" value="/">/</button>
-                <button class="box mult" id="mult" type="submit" value="*">x</button>
-                <button class="box subt" id="subt" value="-">-</button>               
-                <button class="box plus" value="+">+</button>
-                <button class="box dott"  value=".">.</button>
-            </div>
-            
-        
-        <div>
+            <button class= "box divide" id="divide" value="/">/</button>
+            <button class="box mult" id="mult" type="submit" value="*">x</button>
+            <button class="box subt" id="subt" value="-">-</button>               
+            <button class="box plus" value="+">+</button>
+            <button class="box dott"  value=".">.</button>
             <button class="box-ce" id="ce">CE</button>
             <button class="neg">+/-</button>
             <button class="box back" onclick="onPressBackspace()" id="back"><img src="icons/icons8-clear-symbol-30.png" alt="backspace"></button>
             <button class="box-equals" type="submit" value="="> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="25px"><path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>  </button>
-        </div>
     </div>
     <script>
         var nut= ""
