@@ -3,15 +3,22 @@
 }
 body {
     font-family: 'Handlee', cursive, serif;
-    max-width: 350px;
+    max-width: 400px;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 60px;
 }
+/*The main grid*/
 .main {
     display: grid;
-    width: 350px;
-    height: 450px;
-    grid-template-columns: minmax(20px, 100px)  minmax(20px, 100px) minmax(20px, 100px) minmax(20px, 100px);
+    max-width: 375px;
+    height: 480px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "c c b d"
+                         "seven eight nine m"
+                         "four five six s"
+                         "one two three p"
+                         "n zero dott e";
     justify-self: center;
     grid-gap: 2px 2px;
     text-align: center;
@@ -19,21 +26,29 @@ body {
     border-bottom-right-radius: 4px;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     background-color: rgb(24, 24, 24);
+    border: 0.5px solid rgb(24, 24, 24);
 }
-.box {
+
+button {
+    border: none;
+}
+.box, .neg, .box-ce{
 
     font-size: 25px;
     color: white;
-    padding-top: 30px;
+    padding-top: 2px;
 }
-.box:hover {
+.box:hover, .box-ce:hover{
     background-color: gray;
     cursor: pointer;
 }
+/*The screen on top*/
 .screen {
     background-color: rgb(54, 54, 54);
     display: block;
-    width: 350px;
+    width: 375px;
+    margin: auto;
+    border: none;
     height: 110px;
     text-align: end;
     font-size: 30px;
@@ -49,29 +64,76 @@ svg {
 img {
     color: white;
 }
-.ce, .c, .back, .divide, .mult, .subt, .plus{
+/*Colouring*/
+.box-ce, .c, .back, .divide, .mult, .subt, .plus{
     background-color: rgb(32, 32, 32);
 }
-.equals {
+.box-equals {
     background-color: rgb(83, 135, 194);
 }
-.equals:hover {
+.box-equals:hover {
     background-color: rgb(110, 110, 252);
 }
 .dott, .zero, .neg, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
     background-color: black;
 }
- @media (min-width: 600px) {
 
-    body {
-        margin-top: 50px;
-        max-width: 400px;
-    }
-     .main {
-         height: 500px;
-         width: 400px;
-     }
-     .screen {
-         width: 400px;
+ /*grid Areas for the buttons*/
+ .box-ce {
+     grid-area: c;
+ }
+ .back {
+     grid-area: b;
+ }
+ .divide {
+     grid-area: d;
+ }
+ .seven {
+     grid-area: seven;
+ }
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.mult {
+    grid-area: m;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six
+}
+.three {
+    grid-area: three;
+}
+.plus {
+    grid-area: p;
+}
+.neg {
+    grid-area: n;
+}
+.zero {
+    grid-area: zero;
+}
+.dott {
+    grid-area: dott;
+}
+.box-equals {
+    grid-area: e;
+}
+.subt {
+    grid-area: s;
+}
+
+/*Media Queries*/
+ @media screen and (max-width: 480px) {
+     .main, .screen {
+         max-width: 340px;
      }
  }
